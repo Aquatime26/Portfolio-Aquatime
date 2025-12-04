@@ -17,7 +17,11 @@ export default function AboutMe() {
           <div className="mb-4">
             <h2 className="text-3xl font-bold mb-4">À propos de moi</h2>
             <p className="text-gray-700">
-              Ici, tu pourras mettre ta description personnelle, tes objectifs, ton parcours, etc.
+              Passionné par les possibilités de créations offertes par le web, je me suis lancé dans le développement web
+              afin de transformer mes idées en réalités numériques. Mon objectif est de concevoir des sites web modernes,
+              fonctionnels et esthétiques qui répondent aux besoins des utilisateurs tout en offrant une expérience fluide et agréable.
+
+              Une question ? Une idée de projet ? N&apos;hésitez pas à me contacter !
             </p>
           </div>
 
