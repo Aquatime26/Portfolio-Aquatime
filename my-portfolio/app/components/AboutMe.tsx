@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import "./aboutMe.scss";
+
 export default function AboutMe() {
   return (
     <section id="about" className="w-full py-20 bg-white">
@@ -5,9 +8,13 @@ export default function AboutMe() {
         
         {/* Partie gauche : photo */}
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-64 h-64 bg-gray-200 rounded-lg">
-            {/* Ici tu pourras mettre ta photo avec <img src="..." /> */}
-          </div>
+          <Image
+            src="/photo3.webp"
+            alt="Photo de créateur du site : Alexis Avril"
+            width={300}
+            height={300}
+            className="profile-photo"
+          />
         </div>
 
         {/* Partie droite : description + contacts */}
@@ -17,10 +24,14 @@ export default function AboutMe() {
           <div className="mb-4">
             <h2 className="text-3xl font-bold mb-4">À propos de moi</h2>
             <p className="text-gray-700">
-              Passionné par les possibilités de créations offertes par le web, je me suis lancé dans le développement web
-              afin de transformer mes idées en réalités numériques. Mon objectif est de concevoir des sites web modernes,
-              fonctionnels et esthétiques qui répondent aux besoins des utilisateurs tout en offrant une expérience fluide et agréable.
-
+              C&apos;est en recherchant un travail de précision et de patience que je me suis intéressé au développement web.
+              J&apos;ai découvert un univers passionnant où la créativité rencontre la technique.
+            </p>
+            <p className="text-gray-700 mt-4">
+              Dans l'optique d'une reconversion professionnelle, j&apos;ai suivi une formation intensive de développeur web et web mobile chez OpenClassrooms.
+              Aujourd&apos;hui, je suis enthousiaste à l&apos;idée de contribuer à des projets innovants et de continuer à apprendre dans ce domaine en constante évolution.
+            </p>
+            <p className="text-gray-700 mt-4"> 
               Une question ? Une idée de projet ? N&apos;hésitez pas à me contacter !
             </p>
           </div>
@@ -28,10 +39,10 @@ export default function AboutMe() {
           {/* Moyens de contact */}
           <div>
             <h3 className="text-2xl font-semibold mb-2">Contact</h3>
-            <ul className="space-y-2 text-gray-700">
+            <ul className="space-y-2 text-gray-700 font-bold">
               <li>Email : alexisavril@sfr.fr</li>
               <li>Téléphone : 06 02 18 05 62</li>
-              <li>https://www.linkedin.com/in/alexis-avril-7330aa297/</li>
+              <li>https://www.linkedin.com/in/alexis-avril-developper/</li>
             </ul>
           </div>
 
