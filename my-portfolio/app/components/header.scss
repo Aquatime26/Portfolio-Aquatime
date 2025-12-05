@@ -1,0 +1,12 @@
+@keyframes float-move-rotate {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(var(--move)) rotate(var(--rotate)); } /* éloignement vers la droite */
+}
+
+.header-image {
+  animation: float-move-rotate 5s ease-in-out infinite alternate;
+}
+.header-image:nth-child(1) { --move: -80px; --rotate: -360deg; }
+.header-image:nth-child(2) { --move: -30px; --rotate: 360deg; }
+.header-image:nth-child(3) { --move: 30px; --rotate: -360deg; }
+.header-image:nth-child(4) { --move: 80px; --rotate: 360deg; }
