@@ -11,7 +11,7 @@ interface TechSkill {
 
 const techSkills: TechSkill[] = [
   { name: "HTML/CSS", image: "/htmlCss.webp" },
-  { name: "JavaScript", image: "/javaScript.webp" },
+  { name: "JavaScript", image: "/javascript.webp" },
   { name: "React", image: "/react.webp" },
   { name: "Node.js", image: "/nodeJs.webp" },
   { name: "MongoDB / noSQL", image: "/mongoDB.webp" },

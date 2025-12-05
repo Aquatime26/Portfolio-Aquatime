@@ -11,15 +11,36 @@ const projects: Project[] = [
     title: "Site d'échange de notations de livres",
     description: "Site permettant aux utilisateurs d'échanger des notations, d'ajouter, de supprimer et de modifier des livres.",
     technologies: "HTML, CSS, JavaScript, Node.js, Express, MongoDB",
-    image: "/project1.png",
-    github: "https://github.com/Aquatime26/projet1",
+    image: "/projet6.webp",
+    github: "https://github.com/Aquatime26/0C-Project-6",
   },
   {
     title: "Site de présentation de logements en ligne",
     description: "Travail de création d'un site web pour présenter des logements avec des fonctionnalités interactives.",
     technologies: "React, HTML, CSS, JavaScript",
-    image: "/project2.png",
-    github: "https://github.com/Aquatime26/projet2",
+    image: "/projet5.webp",
+    github: "https://github.com/Aquatime26/OC-5-React",
+  },
+  {
+    title: "Site d'affichage en HTML et CSS, + gestion des medias queries",
+    description: "Application web pour gérer des tâches avec des fonctionnalités de création, modification et suppression.",
+    technologies: "HTML, CSS,",
+    image: "/projet2.webp",
+    github: "https://github.com/Aquatime26/Projet-2-Openclassroom",
+  },
+  {
+    title: "Travail d'amélioration et de gestion d'un SEO pour un site web existant",
+    description: "Optimisation du référencement naturel (SEO) d'un site web existant pour améliorer sa visibilité sur les moteurs de recherche.",
+    technologies: "HTML, CSS, Javascript, SEO, Wave, Lighthouse",
+    image: "/projet4.webp",
+    github: "https://github.com/Aquatime26/Oc-4new",
+  },
+  {
+    title: "Création d'un site web pour une photographe professionnelle",
+    description: "Développement d'un site web vitrine pour une photographe, incluant une galerie d'images et un formulaire de contact.",
+    technologies: "HTML, CSS, JavaScript",
+    image: "/projet3.webp",
+    github: "https://github.com/Aquatime26/OC-Projet-3-JS",
   }
   // Tu pourras ajouter d’autres projets ici facilement
 ];
