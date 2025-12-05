@@ -21,14 +21,14 @@ export default function AboutMe() {
         <div className="md:w-1/2 flex flex-col justify-between h-full gap-8">
           
           {/* Description personnelle */}
-          <div className="mb-4">
+          <div className="mb-4 text-justify">
             <h2 className="text-3xl font-bold mb-4">À propos de moi</h2>
             <p className="text-gray-700">
               C&apos;est en recherchant un travail de précision et de patience que je me suis intéressé au développement web.
               J&apos;ai découvert un univers passionnant où la créativité rencontre la technique.
             </p>
             <p className="text-gray-700 mt-4">
-              Dans l'optique d'une reconversion professionnelle, j&apos;ai suivi une formation intensive de développeur web et web mobile chez OpenClassrooms.
+              Dans l&apos;optique d&apos;une reconversion professionnelle, j&apos;ai suivi une formation intensive de développeur web et web mobile chez OpenClassrooms.
               Aujourd&apos;hui, je suis enthousiaste à l&apos;idée de contribuer à des projets innovants et de continuer à apprendre dans ce domaine en constante évolution.
             </p>
             <p className="text-gray-700 mt-4"> 
