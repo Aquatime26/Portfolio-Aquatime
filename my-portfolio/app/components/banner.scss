@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: Black;
+  background-color: black;
   color: white;
 
   .banner-left {
@@ -13,34 +13,24 @@
     padding: 3rem;
 
     h1, p, h2 {
-      opacity: 0;                 // texte invisible au départ
-      transform: translateY(20px); // léger décalage vers le bas
-      animation: fade-in 1.5s ease-out forwards; // animation
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fade-in 1.5s ease-out forwards;
     }
 
-    h1 {
-      animation-delay: 0.5s; // délai pour le titre
-    }
-
-    p {
-      animation-delay: 1s;   // délai pour le paragraphe
-    }
-
-    h2 {
-      animation-delay: 2.5s; // délai pour le titre
-    }
+    h1 { animation-delay: 0.5s; }
+    p  { animation-delay: 1s; }
+    h2 { animation-delay: 2.5s; }
   }
 
   .banner-right {
-    flex: 1;
+    flex: 0.5;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('/wallCards.webp') no-repeat center center;
     background-size: cover;
-
-
-}
+  }
 
   @keyframes fade-in {
     to {
@@ -49,20 +39,55 @@
     }
   }
 
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  h1 { font-size: 3rem; font-weight: bold; margin-bottom: 1rem; }
+  p  { font-size: 2rem; margin-bottom: 2rem; }
+  h2 { font-size: 2.5rem; font-weight: bold; margin-top: 1.5rem; }
+
+  /* ------------------- Media Queries ------------------- */
+  @media (max-width: 767px) {
+    flex-direction: row; /* conserver côté à côte */
+    height: auto;
+
+    .banner-left, .banner-right {
+      flex: 1;              /* chaque côté prend la moitié */
+      padding: 1.5rem;
+    }
+
+    .banner-left {
+      h1 { font-size: 2rem; }
+      p  { font-size: 1rem; }
+      h2 { font-size: 1.5rem; }
+      text-align: center;
+    }
+
+    .banner-right {
+      min-height: 200px;    /* hauteur minimale pour l'image */
+      background-size: contain; /* éviter écrasement */
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
-  p {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
+  @media (max-width: 480px) {
+  .banner {
+    flex-direction: column; /* texte au-dessus de l'image */
+    height: auto;
+    gap: 0.5rem; /* réduire l'espace entre texte et image */
 
-  h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
+    .banner-left {
+      h1 { font-size: 1rem; margin-bottom: 20px; }
+      p  { font-size: 0.5rem; margin-bottom: 10px; }
+      h2 { font-size: 0.75rem; margin-top: 0; }
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .banner-right {
+      width: 100%;
+      min-height: 120px;  /* réduire hauteur pour tout tenir */
+      background-size: cover;
+      margin-top: 0.5rem;
+    }
+  }
   }
 }

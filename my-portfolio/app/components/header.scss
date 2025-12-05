@@ -1,6 +1,9 @@
+/* header.scss */
+
+/* Animations des cartes */
 @keyframes float-move-rotate {
   0%, 100% { transform: translateX(0) rotate(0deg); }
-  50% { transform: translateX(var(--move)) rotate(var(--rotate)); } /* éloignement vers la droite */
+  50% { transform: translateX(var(--move)) rotate(var(--rotate)); }
 }
 
 .header-image {
@@ -10,3 +13,80 @@
 .header-image:nth-child(2) { --move: -30px; --rotate: 360deg; }
 .header-image:nth-child(3) { --move: 30px; --rotate: -360deg; }
 .header-image:nth-child(4) { --move: 80px; --rotate: 360deg; }
+
+/* Styles du header */
+#header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* permet aux éléments de passer à la ligne si besoin */
+}
+
+/* Menu principal */
+#header ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Conteneur des images */
+.header-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 1rem;
+}
+
+/* ------------------- Media Queries ------------------- */
+
+/* Pour les écrans <= 767px */
+@media (max-width: 767px) {
+  #header nav {
+    flex-direction: column;   /* Images puis menu verticalement */
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Conteneur des images */
+  .header-icons {
+    margin: 0; 
+    gap: 0.25rem;
+  }
+
+  /* Animation réduite pour mobile */
+  .header-image:nth-child(1) { --move: -40px; --rotate: -180deg; }
+  .header-image:nth-child(2) { --move: -15px; --rotate: 180deg; }
+  .header-image:nth-child(3) { --move: 15px; --rotate: -180deg; }
+  .header-image:nth-child(4) { --move: 40px; --rotate: 180deg; }
+
+  /* Menu principal : suppression des margins Tailwind et espacement réduit */
+  #header ul {
+    flex-direction: row;           /* li en ligne */
+    justify-content: center;
+    gap: 0.3rem;                   /* remplace space-x-6 */
+    margin-inline-start: 0;        /* réinitialise margin généré par Tailwind */
+    margin-inline-end: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  #header ul li a {
+    font-size: 0.875rem;           /* réduire la taille du texte si nécessaire */
+  }
+}
+
+/* Pour les très petits écrans <= 480px */
+@media (max-width: 480px) {
+  #header nav {
+    padding: 0.5rem 1rem;
+  }
+
+  #header ul {
+    gap: 0.25rem;                  /* espacement encore plus petit */
+    font-size: 0.75rem;
+  }
+
+  .header-icons {
+    gap: 0.15rem;
+  }
+}
