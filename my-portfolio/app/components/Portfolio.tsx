@@ -47,7 +47,7 @@ const projects: Project[] = [
 
 export default function Portfolio() {
   return (
-    <section id="projects" className="w-full py-20 bg-gray-50">
+    <section id="projects" className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Mes Projets</h2>
 
