@@ -44,14 +44,37 @@
   h2 { font-size: 2.5rem; font-weight: bold; margin-top: 1.5rem; }
 
   /* ------------------- Media Queries ------------------- */
-  @media (max-width: 767px) {
-    flex-direction: row; /* conserver côté à côte */
+  @media (max-width: 768px) {
+    padding-top: 124px;
+    flex-direction: column; /* texte au-dessus de l'image */
     height: auto;
 
     .banner-left, .banner-right {
       flex: 1;              /* chaque côté prend la moitié */
       padding: 1.5rem;
     }
+
+    .banner-left {
+      height: auto;  /* hauteur fixe pour le texte */
+      min-height: 200px;
+      h1 { font-size: 3rem; }
+      p  { font-size: 1rem; }
+      h2 { font-size: 2rem; margin-top: 0; }
+      text-align: center;
+    }
+
+    .banner-right {
+      min-height: 450px;    /* hauteur minimale pour l'image */
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    height: auto;
+    padding-top: 105px;
+    gap: 0.5rem; /* réduire l'espace entre texte et image */
 
     .banner-left {
       h1 { font-size: 2rem; }
@@ -61,33 +84,9 @@
     }
 
     .banner-right {
-      min-height: 200px;    /* hauteur minimale pour l'image */
-      background-size: contain; /* éviter écrasement */
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  @media (max-width: 480px) {
-  .banner {
-    flex-direction: column; /* texte au-dessus de l'image */
-    height: auto;
-    gap: 0.5rem; /* réduire l'espace entre texte et image */
-
-    .banner-left {
-      h1 { font-size: 1rem; margin-bottom: 20px; }
-      p  { font-size: 0.5rem; margin-bottom: 10px; }
-      h2 { font-size: 0.75rem; margin-top: 0; }
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .banner-right {
       width: 100%;
-      min-height: 120px;  /* réduire hauteur pour tout tenir */
+      min-height: 200px;  /* réduire hauteur pour tout tenir */
       background-size: cover;
-      margin-top: 0.5rem;
     }
-  }
   }
 }
