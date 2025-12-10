@@ -41,8 +41,13 @@ const projects: Project[] = [
     technologies: "HTML, CSS, JavaScript",
     image: "/projet3.webp",
     github: "https://github.com/Aquatime26/OC-Projet-3-JS",
+  },
+  {
+    title: "Projet pour une 1ère expérience avec les méthodes Agile et Scrum",
+    description: "Mise en place d'un tableau Kanban, d'un découpage en sprints, de documentation et de présentation de projet, ainsi que d'une veille technologique",
+    technologies: "Trello, Feedly",
+    image: "/kanban.webp",
   }
-  // Tu pourras ajouter d’autres projets ici facilement
 ];
 
 export default function Portfolio() {

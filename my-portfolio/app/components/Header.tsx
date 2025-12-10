@@ -16,8 +16,9 @@ export default function Header() {
 
          <ul className="flex space-x-6 justify-end">
           <li><a href="#banner" className="text-black hover:text-red-600 transition-colors duration-300">Accueil</a></li>
-          <li><a href="#general-skills" className="text-black hover:text-red-600 transition-colors duration-300">Compétences</a></li>
+          <li><a href="#general-skills" className="text-black hover:text-red-600 transition-colors duration-300">Services</a></li>
           <li><a href="#about" className="text-black hover:text-red-600 transition-colors duration-300">À propos</a></li>
+          <li><a href="#technical-skills" className="text-black hover:text-red-600 transition-colors duration-300">Compétences</a></li>
           <li><a href="#projects" className="text-black hover:text-red-600 transition-colors duration-300">Projets</a></li>
           <li><a href="#contact" className="text-black hover:text-red-600 transition-colors duration-300">Contact</a></li>
         </ul>

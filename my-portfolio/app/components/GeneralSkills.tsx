@@ -23,8 +23,8 @@ const skills: Skill[] = [
     image: "/stars.webp"
   },
   {
-    title: "Gestion de projets",
-    description: "Planification et coordination efficaces pour respecter les délais.",
+    title: "Méthodes Agile et Scrum",
+    description: "Méthodes de planification et de travail efficaces pour travailler en équipe.",
     image: "/crystalBall.webp"
   },
   {
@@ -46,7 +46,7 @@ export default function GeneralSkills() {
       className="w-full py-20 bg-gray-50"
     >
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Mes compétences</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">Services</h2>
         <div className="grid gap-20 md:grid-cols-3">
           {skills.map((skill, index) => (
             <div key={index} className="p-6 bg-white rounded-lg shadow-md flex flex-col items-center text-center">
