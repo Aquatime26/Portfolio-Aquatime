@@ -4,6 +4,37 @@ import { useEffect, useRef, useState } from "react";
 export default function ContactForm() {
   const formRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error" | "rate">("idle");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form =e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = Object.fromEntries(formData.entries());
+
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (response.status === 429) {
+      setStatus("rate");
+      return;
+    }
+
+    const result = await response.json();
+
+    if (result.success) {
+      setStatus("success");
+      form.reset();
+    } else {
+      setStatus("error");
+    }
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,7 +63,7 @@ export default function ContactForm() {
           Contactez-moi
         </h2>
 
-        <form className={`flex flex-col gap-6 w-full ${visible ? "fade-in-delay" : ""}`}>
+        <form onSubmit={onSubmit} className={`flex flex-col gap-6 w-full ${visible ? "fade-in-delay" : ""}`}>
           {/*Nom*/}
           <label htmlFor="name" className="sr-only">Votre nom</label>
           <input type="text" name="name" placeholder="Votre nom"
@@ -47,7 +78,7 @@ export default function ContactForm() {
           />
           {/*type de demande*/}
           <label htmlFor="type" className="sr-only">Type de demande</label>
-          <select name="type"
+          <select id="type" name="type"
             className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
             required
           >
@@ -75,6 +106,17 @@ export default function ContactForm() {
           >
             Envoyer
           </button>
+
+          {status === "success" && (
+            <p className="text-green-600 font-semibold">Votre message a bien été envoyé.</p>
+          )}
+          {status === "error" && (
+            <p className="text-red-600 font-semibold">Une erreur est survenue. Veuillez réessayer.</p>
+          )}
+          {status === "rate" && (
+            <p className="text-orange-600 font-semibold">Veuillez attendre quelques instants avant de réessayer.</p>
+          )}
+
         </form>
       </div>
     </section>
