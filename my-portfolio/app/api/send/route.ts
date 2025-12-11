@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 // Mémoire en RAM pour anti-spam simple (soft rate limit)
 const lastSent: Record<string, number> = {};
 
