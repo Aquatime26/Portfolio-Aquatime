@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+// import { Resend } from "resend";
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -8,11 +8,20 @@ export const runtime = 'nodejs';
 const lastSent: Record<string, number> = {};
 
 export async function POST(request: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY!);
+  const { Resend } = await import("resend");
+  
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json(
+      { success: false, error: "server-config-error" },
+      { status: 500 }
+    );
+  }
+  
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  
   const ip = request.headers.get("x-forwarded-for") || "unknown";
   const now = Date.now();
 
-  // Limite : 1 message toutes les 30 secondes par IP
   if (lastSent[ip] && now - lastSent[ip] < 30000) {
     return NextResponse.json(
       { success: false, error: "rate-limit" },
@@ -23,7 +32,6 @@ export async function POST(request: Request) {
   const data = await request.json();
   const { name, email, type, subject, message } = data;
 
-  // Validation
   if (!name || !email || !type || !subject || !message) {
     return NextResponse.json(
       { success: false, error: "missing-fields" },
