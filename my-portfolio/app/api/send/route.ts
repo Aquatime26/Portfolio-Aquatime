@@ -48,10 +48,9 @@ export async function POST(request: Request) {
 
   try {
     const response = await resend.emails.send({
-      from: "contact@tondomaine.com",
+      from: "contact@alexisavril.dev",
       to: "alexisavril@sfr.fr",
       subject: `[${type}] ${subject}`,
-      replyTo: email,
       html: `
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> ${email}</p>
@@ -60,6 +59,8 @@ export async function POST(request: Request) {
         <p><strong>Message :</strong><br/>${message.replace(/\n/g, "<br/>")}</p>
       `
     });
+
+    console.log("Resend response:", response);
 
     lastSent[ip] = now;
     return NextResponse.json({ success: true, data: response });
