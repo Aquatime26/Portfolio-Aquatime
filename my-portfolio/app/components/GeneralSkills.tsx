@@ -52,7 +52,7 @@ export default function GeneralSkills() {
             <div key={index} className="p-6 bg-white rounded-lg shadow-md flex flex-col items-center text-center">
               <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
               <p className="text-gray-700">{skill.description}</p>
-              <Image src={skill.image} alt={skill.title} width={80} height={80} className="mt-auto"/>
+                <Image src={skill.image} alt={skill.title} width={80} height={80} className="mt-auto" />
             </div>
           ))}
         </div>

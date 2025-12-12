@@ -66,13 +66,13 @@ export default function ContactForm() {
         <form onSubmit={onSubmit} className={`flex flex-col gap-6 w-full ${visible ? "fade-in-delay" : ""}`}>
           {/*Nom*/}
           <label htmlFor="name" className="sr-only">Votre nom</label>
-          <input type="text" name="name" placeholder="Votre nom"
+          <input type="text" id="name" name="name" placeholder="Votre nom" autoComplete="name"
             className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
             required
           />
           {/*email*/}
           <label htmlFor="email" className="sr-only">Votre email</label>
-          <input type="email" name="email" placeholder="Votre email"
+          <input type="email" id="email" name="email" placeholder="Votre email" autoComplete="email"
             className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
             required
           />
@@ -90,14 +90,14 @@ export default function ContactForm() {
 
           {/*sujet*/}
           <label htmlFor="subject" className="sr-only">Sujet du message</label>
-          <input type="text" name="subject" placeholder="Sujet du message"
+          <input type="text" id="subject" name="subject" placeholder="Sujet du message"
             className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
             required
           />
 
           {/*message*/}
           <label htmlFor="message" className="sr-only">Votre message</label>
-          <textarea name="message" placeholder="Votre message (max 500 caractères)"
+          <textarea id="message" name="message" placeholder="Votre message (max 500 caractères)"
             className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
             rows={6} maxLength={500} required
           ></textarea>
