@@ -25,19 +25,23 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Alexis Avril" }],
   creator: "Alexis Avril",
-  metadataBase: new URL("https://mondomaine.fr"),
+  metadataBase: new URL("https://alexisavril.dev"),
+
+  alternates: {
+    canonical: "https://alexisavril.dev",
+  },
 
   openGraph: {
     title: "Alexis Avril – Développeur Web",
     description:
       "Création de sites web modernes, performants et élégants. Découvrez mon portfolio.",
-    url: "https://mondomaine.fr",
+    url: "https://alexisavril.dev",
     siteName: "Alexis Avril – Développeur Web",
     type: "website",
     locale: "fr_FR",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630
       }
@@ -49,7 +53,7 @@ export const metadata: Metadata = {
     title: "Alexis Avril – Développeur Web",
     description:
       "Développeur web spécialisé en création de sites modernes et performants.",
-    images: ["/og-image.jpg"]
+    images: ["/og-image.webp"]
   },
 
   icons: {

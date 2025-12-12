@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Indiquer l’emplacement du sitemap
-Sitemap: https://mondomaine.fr/sitemap.xml
+Sitemap: https://alexisavril.dev/sitemap.xml
