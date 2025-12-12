@@ -42,7 +42,21 @@ export default function AboutMe() {
             <ul className="space-y-2 text-gray-700 font-bold">
               <li>Email : alexisavril@sfr.fr</li>
               <li>Téléphone : 06 02 18 05 62</li>
-              <li>https://www.linkedin.com/in/alexis-avril-developper/</li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/alexis-avril-developper/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Lien vers mon profil LinkedIn"
+                >
+                  <Image
+                    src="/logoLinkedin.webp"
+                    alt="Logo LinkedIn : lien vers mon profil LinkedIn"
+                    width={24} 
+                    height={24}
+                  />
+                </a>
+              </li>
             </ul>
           </div>
 

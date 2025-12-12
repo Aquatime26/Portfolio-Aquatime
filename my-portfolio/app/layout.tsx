@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     "site internet",
     "création site web",
     "portfolio développeur",
-    "web moderne"
+    "web moderne",
+    "Alexis Avril",
+    "développement web",
+    "front-end",
   ],
   authors: [{ name: "Alexis Avril" }],
   creator: "Alexis Avril",
