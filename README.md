@@ -10,10 +10,13 @@ Technologies utilisées pour ce site :
 - SCSS / Windtail CSS
 
 Déploiement :
-Le site est déployé sur Vercel
-Les noms de domaines alexisavril.dev et www.alexisavril.dev ont été sécurisé sur OVH
+
+- Le site est déployé sur Vercel.
+- Les noms de domaines alexisavril.dev et www.alexisavril.dev ont été sécurisé sur OVH
 
 Développement local
+
 '''bash
-npm install
-npm run dev
+
+- npm install
+- npm run dev
