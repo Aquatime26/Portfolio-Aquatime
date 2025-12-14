@@ -9,7 +9,7 @@ export default function AboutMe() {
         {/* Partie gauche : photo */}
         <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/photo3.webp"
+              src="/photo4.webp"
               alt="Photo de créateur du site : Alexis Avril"
               width={300}
               height={300}
