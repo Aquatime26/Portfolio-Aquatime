@@ -60,7 +60,10 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.webp"
+    icon: [
+      { url: "/favicon.png", sizes: "48x48", type: "image/png" }
+    ],
+    apple: "/apple-touch-icon.png"
   }
 };
 
